@@ -1,0 +1,6 @@
+@Oshima.Core_HostAddress = http://localhost:27799
+
+GET {{Oshima.Core_HostAddress}}/userdaily/3305106902
+Accept: application/json
+
+###

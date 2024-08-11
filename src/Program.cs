@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Diagnostics;
-using Milimoe.FunGame.Core.Api.Utility;
 using Milimoe.Oshima.Core.Configs;
 
 try
@@ -48,7 +47,7 @@ try
         });
     });
 
-    TaskUtility.NewTask(async () =>
+    _ = Task.Factory.StartNew(async () =>
     {
         while (true)
         {
@@ -69,8 +68,7 @@ try
                 {
                     Daily.ClearDailys = false;
                     // 清空运势
-                    Daily.UserDailys.Clear();
-                    Daily.SaveDaily();
+                    Daily.ClearDaily();
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("已重置所有人的今日运势。");
                     Console.ForegroundColor = ConsoleColor.Gray;
@@ -90,7 +88,7 @@ try
         }
     });
 
-    TaskUtility.NewTask(() =>
+    _ = Task.Factory.StartNew(() =>
     {
         while (true)
         {

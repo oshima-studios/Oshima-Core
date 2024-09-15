@@ -8,6 +8,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Company>Oshima Studios</Company>
     <Authors>Milimoe</Authors>
+    <BaseOutputPath>..\bin\</BaseOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,9 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FunGame.Core">
-      <HintPath>..\..\FunGame.Core\bin\Debug\net8.0\FunGame.Core.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\FunGame.Core\FunGame.Core.csproj" />
+    <ProjectReference Include="..\..\FunGame.Testing\Library\FunGame.Testing.csproj" />
   </ItemGroup>
 
 </Project>

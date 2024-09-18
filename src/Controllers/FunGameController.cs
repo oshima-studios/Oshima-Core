@@ -11,9 +11,9 @@ namespace Milimoe.Oshima.Core.Controllers
         private readonly ILogger<UserDailyController> _logger = logger;
 
         [HttpGet("test")]
-        public List<string> GetTest([FromQuery] bool? isWeb = null)
+        public List<string> GetTest([FromQuery] bool? isweb = null)
         {
-            if (isWeb is null || isWeb == true)
+            if (isweb ?? true)
             {
                 return FunGameSimulation.StartGame(false, true);
             }

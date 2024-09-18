@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Diagnostics;
+using Milimoe.FunGame.Testing.Tests;
 using Milimoe.Oshima.Core.Configs;
 
 try
@@ -10,8 +11,21 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    // 添加 CORS 服务
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowSpecificOrigin", policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+    });
 
     WebApplication app = builder.Build();
+    
+    // 启用 CORS
+    app.UseCors("AllowSpecificOrigin");
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
@@ -133,4 +147,5 @@ static void OSMCoreInit()
     Daily.InitDaily();
     SayNo.InitSayNo();
     Ignore.InitIgnore();
+    FunGameSimulation.LoadModules();
 }

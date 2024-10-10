@@ -24,7 +24,7 @@ namespace Milimoe.Oshima.Core.Controllers
                 return FunGameSimulation.StartGame(false, false);
             }
         }
-        
+
         [HttpGet("stats")]
         public string GetStats([FromQuery] int? id = null)
         {
@@ -67,7 +67,7 @@ namespace Milimoe.Oshima.Core.Controllers
             }
             return NetworkUtility.JsonSerialize("");
         }
-        
+
         [HttpPost("post")]
         public string PostName([FromBody] string name)
         {

@@ -44,7 +44,7 @@ namespace Milimoe.Oshima.Core.Utils
                 return new UserDaily(0, 0, "今日运势列表为空，请联系管理员设定。");
             }
         }
-        
+
         public static UserDaily ViewUserDaily(long user_id)
         {
             if (Daily.UserDailys.TryGetValue(user_id, out string? value) && value != null && value.Trim() != "")

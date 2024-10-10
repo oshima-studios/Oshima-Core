@@ -15,7 +15,7 @@ namespace Milimoe.Oshima.Core.Controllers
         {
             return UserDailyUtil.GetUserDaily(user_id);
         }
-        
+
         [HttpGet("v/{user_id}", Name = "ViewUserDaily")]
         public UserDaily View(long user_id)
         {

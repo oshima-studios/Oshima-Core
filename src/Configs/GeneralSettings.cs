@@ -51,7 +51,7 @@ namespace Milimoe.Oshima.Core.Configs
         public static List<long> SayNoAccessGroup { get; set; } = [];
 
         public static List<long> OSMCoreGroup { get; set; } = [];
-        
+
         public static List<long> Challenge12ClockGroup { get; set; } = [];
 
         public static PluginConfig Configs { get; set; } = new("rainbot", "config");

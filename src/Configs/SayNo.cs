@@ -232,7 +232,7 @@ namespace Milimoe.Oshima.Core.Configs
             string msg;
             if (islist)
             {
-                msg = list.Count > 0 ? "列表" + part + "拥有以下成员：" + "\r\n"+ string.Join("\r\n", list) : "此列表不存在或没有任何成员。";
+                msg = list.Count > 0 ? "列表" + part + "拥有以下成员：" + "\r\n" + string.Join("\r\n", list) : "此列表不存在或没有任何成员。";
             }
             else
             {

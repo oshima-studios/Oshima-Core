@@ -111,7 +111,7 @@ namespace Milimoe.Oshima.Core.Configs
             switch (group.ToLower())
             {
                 case "repeatignore":
-                    list = [..RepeatIgnore];
+                    list = [.. RepeatIgnore];
                     break;
                 case "callbrotherqqignore":
                     list = CallBrotherQQIgnore.Select(x => x.ToString()).ToList();

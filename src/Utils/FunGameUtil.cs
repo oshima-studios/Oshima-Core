@@ -1,10 +1,10 @@
 ﻿using System.Text;
-using Milimoe.FunGame.Testing.Items;
 using Milimoe.FunGame.Core.Api.Utility;
 using Milimoe.FunGame.Core.Entity;
-using Milimoe.FunGame.Core.Library.Common.Addon;
 using Milimoe.FunGame.Core.Library.Constant;
-using Milimoe.FunGame.Testing.Skills;
+using Milimoe.Oshima.Core.FunGame.Characters;
+using Milimoe.Oshima.Core.FunGame.Items;
+using Milimoe.Oshima.Core.FunGame.Skills;
 
 namespace Milimoe.Oshima.Core.Utils
 {
@@ -12,7 +12,7 @@ namespace Milimoe.Oshima.Core.Utils
     {
         public FunGameSimulation()
         {
-            LoadModules();
+            InitCharacter();
 
             bool printout = true;
             List<string> strs = StartGame(printout);
@@ -509,31 +509,24 @@ namespace Milimoe.Oshima.Core.Utils
             }
         }
 
-        public static void LoadModules()
+        public static void InitCharacter()
         {
-            PluginLoader plugins = PluginLoader.LoadPlugins([]);
-            foreach (string plugin in plugins.Plugins.Keys)
-            {
-                Console.WriteLine(plugin + " is loaded.");
-            }
+            Characters.Add(OshimaCharacters.Oshima);
+            Characters.Add(OshimaCharacters.Xinyin);
+            Characters.Add(OshimaCharacters.Yang);
+            Characters.Add(OshimaCharacters.NanGanyu);
+            Characters.Add(OshimaCharacters.NiuNan);
+            Characters.Add(OshimaCharacters.Mayor);
+            Characters.Add(OshimaCharacters.马猴烧酒);
+            Characters.Add(OshimaCharacters.QingXiang);
+            Characters.Add(OshimaCharacters.QWQAQW);
+            Characters.Add(OshimaCharacters.ColdBlue);
+            Characters.Add(OshimaCharacters.绿拱门);
+            Characters.Add(OshimaCharacters.QuDuoduo);
 
-            Dictionary<string, string> plugindllsha512 = [];
-            foreach (string pfp in PluginLoader.PluginFilePaths.Keys)
+            foreach (Character c in Characters)
             {
-                string text = Encryption.FileSha512(PluginLoader.PluginFilePaths[pfp]);
-                plugindllsha512.Add(pfp, text);
-                if (PrintOut) Console.WriteLine(pfp + $" is {text}.");
-            }
-
-            GameModuleLoader modules = GameModuleLoader.LoadGameModules(FunGameInfo.FunGame.FunGame_Desktop, []);
-            foreach (CharacterModule cm in modules.Characters.Values)
-            {
-                foreach (Character c in cm.Characters)
-                {
-                    if (PrintOut) Console.WriteLine(c.Name);
-                    Characters.Add(c);
-                    CharacterStatistics.Add(c, new());
-                }
+                CharacterStatistics.Add(c, new());
             }
 
             StatsConfig.LoadConfig();
@@ -542,23 +535,6 @@ namespace Milimoe.Oshima.Core.Utils
                 if (StatsConfig.ContainsKey(character.ToStringWithOutUser()))
                 {
                     CharacterStatistics[character] = StatsConfig.Get<CharacterStatistics>(character.ToStringWithOutUser()) ?? CharacterStatistics[character];
-                }
-            }
-
-            Dictionary<string, string> moduledllsha512 = [];
-            foreach (string mfp in GameModuleLoader.ModuleFilePaths.Keys)
-            {
-                string text = Encryption.FileSha512(GameModuleLoader.ModuleFilePaths[mfp]);
-                moduledllsha512.Add(mfp, text);
-                if (PrintOut) Console.WriteLine(mfp + $" is {text}.");
-            }
-
-            foreach (string moduledll in moduledllsha512.Keys)
-            {
-                string server = moduledllsha512[moduledll];
-                if (plugindllsha512.TryGetValue(moduledll, out string? client) && client != "" && server == client)
-                {
-                    Console.WriteLine(moduledll + $" is checked pass.");
                 }
             }
         }

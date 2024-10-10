@@ -23,7 +23,7 @@ try
     });
 
     WebApplication app = builder.Build();
-    
+
     // ∆Ù”√ CORS
     app.UseCors("AllowSpecificOrigin");
 
@@ -147,5 +147,5 @@ static void OSMCoreInit()
     Daily.InitDaily();
     SayNo.InitSayNo();
     Ignore.InitIgnore();
-    FunGameSimulation.LoadModules();
+    FunGameSimulation.InitCharacter();
 }

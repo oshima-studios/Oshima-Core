@@ -6,7 +6,7 @@
         GreatFortune,
         ModerateFortune,
         GoodFortune,
-        SmallFortune,
+        MinorFortune,
         Misfortune,
         GreatMisfortune
     }

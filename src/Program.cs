@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Diagnostics;
-using Milimoe.FunGame.Testing.Tests;
 using Milimoe.Oshima.Core.Configs;
+using Milimoe.Oshima.Core.Utils;
 
 try
 {

@@ -1,5 +1,5 @@
 ﻿using Milimoe.FunGame.Core.Api.Utility;
-using Milimoe.Oshima.Core.src.Constant;
+using Milimoe.Oshima.Core.Constant;
 
 namespace Milimoe.Oshima.Core.Configs
 {

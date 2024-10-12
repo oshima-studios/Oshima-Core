@@ -1,4 +1,4 @@
-﻿namespace Milimoe.Oshima.Core.src.Constant
+﻿namespace Milimoe.Oshima.Core.Constant
 {
     public enum DailyType
     {

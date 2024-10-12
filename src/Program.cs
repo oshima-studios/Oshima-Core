@@ -34,6 +34,8 @@ try
         app.UseSwaggerUI();
     }
 
+    app.UseStaticFiles();
+
     app.UseHttpsRedirection();
 
     app.UseAuthorization();
@@ -144,6 +146,8 @@ static void OSMCoreInit()
 {
     GeneralSettings.LoadSetting();
     GeneralSettings.SaveConfig();
+    QQOpenID.LoadConfig();
+    QQOpenID.SaveConfig();
     Daily.InitDaily();
     SayNo.InitSayNo();
     Ignore.InitIgnore();

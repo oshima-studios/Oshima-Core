@@ -1,7 +1,7 @@
 ﻿using Milimoe.FunGame.Core.Api.Utility;
 using Milimoe.Oshima.Core.Configs;
+using Milimoe.Oshima.Core.Constant;
 using Milimoe.Oshima.Core.Models;
-using Milimoe.Oshima.Core.src.Constant;
 
 namespace Milimoe.Oshima.Core.Utils
 {

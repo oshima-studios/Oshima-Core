@@ -1,4 +1,4 @@
-﻿namespace Milimoe.Oshima.Core.Models
+﻿namespace Oshima.Core.Models
 {
     public class UserDaily(long user_id, long type, string daily)
     {

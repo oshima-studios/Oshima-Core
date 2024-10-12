@@ -1,4 +1,4 @@
-﻿namespace Milimoe.Oshima.Core.Models
+﻿namespace Oshima.Core.Models
 {
     public class BindQQ(string openid, long qq)
     {

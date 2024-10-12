@@ -1,4 +1,4 @@
-﻿namespace Milimoe.Oshima.Core.Configs
+﻿namespace Oshima.Core.Configs
 {
     public class BlackList
     {

@@ -1,6 +1,6 @@
 ﻿using Milimoe.FunGame.Core.Api.Utility;
 
-namespace Milimoe.Oshima.Core.Configs
+namespace Oshima.Core.Configs
 {
     public class SayNo
     {

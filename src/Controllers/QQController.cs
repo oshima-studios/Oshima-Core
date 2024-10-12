@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Milimoe.FunGame.Core.Api.Utility;
-using Milimoe.Oshima.Core.Configs;
-using Milimoe.Oshima.Core.Models;
+using Oshima.Core.Configs;
+using Oshima.Core.Models;
 
-namespace Milimoe.Oshima.Core.Controllers
+namespace Oshima.Core.Controllers
 {
     [ApiController]
     [Route("[controller]")]

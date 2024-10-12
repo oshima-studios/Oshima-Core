@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Diagnostics;
-using Milimoe.Oshima.Core.Configs;
-using Milimoe.Oshima.Core.Utils;
+using Oshima.Core.Configs;
+using Oshima.Core.Utils;
 
 try
 {

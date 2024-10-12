@@ -2,11 +2,11 @@
 using Milimoe.FunGame.Core.Api.Utility;
 using Milimoe.FunGame.Core.Entity;
 using Milimoe.FunGame.Core.Library.Constant;
-using Milimoe.Oshima.Core.FunGame.Characters;
-using Milimoe.Oshima.Core.FunGame.Items;
-using Milimoe.Oshima.Core.FunGame.Skills;
+using Oshima.FunGame.OshimaModules.Characters;
+using Oshima.FunGame.OshimaModules.Items;
+using Oshima.FunGame.OshimaModules.Skills;
 
-namespace Milimoe.Oshima.Core.Utils
+namespace Oshima.Core.Utils
 {
     public class FunGameSimulation
     {
@@ -511,18 +511,18 @@ namespace Milimoe.Oshima.Core.Utils
 
         public static void InitCharacter()
         {
-            Characters.Add(OshimaCharacters.Oshima);
-            Characters.Add(OshimaCharacters.Xinyin);
-            Characters.Add(OshimaCharacters.Yang);
-            Characters.Add(OshimaCharacters.NanGanyu);
-            Characters.Add(OshimaCharacters.NiuNan);
-            Characters.Add(OshimaCharacters.Mayor);
-            Characters.Add(OshimaCharacters.马猴烧酒);
-            Characters.Add(OshimaCharacters.QingXiang);
-            Characters.Add(OshimaCharacters.QWQAQW);
-            Characters.Add(OshimaCharacters.ColdBlue);
-            Characters.Add(OshimaCharacters.绿拱门);
-            Characters.Add(OshimaCharacters.QuDuoduo);
+            Characters.Add(new OshimaShiya());
+            Characters.Add(new XinYin());
+            Characters.Add(new Yang());
+            Characters.Add(new NanGanYu());
+            Characters.Add(new NiuNan());
+            Characters.Add(new DokyoMayor());
+            Characters.Add(new MagicalGirl());
+            Characters.Add(new QingXiang());
+            Characters.Add(new QWQAQW());
+            Characters.Add(new ColdBlue());
+            Characters.Add(new dddovo());
+            Characters.Add(new Quduoduo());
 
             foreach (Character c in Characters)
             {

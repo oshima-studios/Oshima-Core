@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Milimoe.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Company>Oshima Studios</Company>
     <Authors>Milimoe</Authors>
@@ -27,13 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FunGame.Core\FunGame.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="FunGame\Items\Armor\" />
-    <Folder Include="FunGame\Items\Consumable\" />
-    <Folder Include="FunGame\Items\MagicCardPack\" />
-    <Folder Include="FunGame\Items\Shoes\" />
+    <ProjectReference Include="..\..\OshimaGameModule\OshimaModules\OshimaModules.csproj" />
   </ItemGroup>
 
 </Project>

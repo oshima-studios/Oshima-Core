@@ -2,9 +2,9 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Milimoe.FunGame.Core.Api.Utility;
 using Milimoe.FunGame.Core.Entity;
-using Milimoe.Oshima.Core.Utils;
+using Oshima.Core.Utils;
 
-namespace Milimoe.Oshima.Core.Controllers
+namespace Oshima.Core.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,7 +1,7 @@
 ﻿using Milimoe.FunGame.Core.Api.Utility;
-using Milimoe.Oshima.Core.Constant;
+using Oshima.Core.Constant;
 
-namespace Milimoe.Oshima.Core.Configs
+namespace Oshima.Core.Configs
 {
     public class Daily
     {

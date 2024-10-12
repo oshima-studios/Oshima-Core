@@ -1,9 +1,9 @@
 ﻿using Milimoe.FunGame.Core.Api.Utility;
-using Milimoe.Oshima.Core.Configs;
-using Milimoe.Oshima.Core.Constant;
-using Milimoe.Oshima.Core.Models;
+using Oshima.Core.Configs;
+using Oshima.Core.Constant;
+using Oshima.Core.Models;
 
-namespace Milimoe.Oshima.Core.Utils
+namespace Oshima.Core.Utils
 {
     public class UserDailyUtil
     {
